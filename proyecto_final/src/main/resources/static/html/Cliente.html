@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Clientes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-primary mb-4">Gestión de Clientes</h1>
+
+        <!-- Contenedor para mensajes -->
+        <div id="mensajeCliente" class="alert" role="alert" style="display:none;"></div>
+
+        <!-- Formulario para agregar un nuevo cliente -->
+        <form id="clienteForm" class="mb-4">
+            <div class="form-group">
+                <label for="nombre">Nombre del Cliente</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre del Cliente" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo del Cliente</label>
+                <input type="email" class="form-control" id="correo" placeholder="Correo del Cliente" required>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección del Cliente</label>
+                <input type="text" class="form-control" id="direccion" placeholder="Dirección del Cliente" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono del Cliente</label>
+                <input type="text" class="form-control" id="telefono" placeholder="Teléfono del Cliente" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Agregar Cliente</button>
+        </form>
+
+        <!-- Tabla de clientes -->
+        <h3>Listado de Clientes</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="clientesBody">
+                <!-- Aquí se llenarán los clientes dinámicamente -->
+            </tbody>
+        </table>
+
+        <!-- Botón para regresar al Index -->
+        <button class="btn btn-secondary btn-block" onclick="window.location.href='/'">Regresar al Inicio</button>
+    </div>
+
+    <script src="../js/Cliente.js"></script>
+</body>
+</html>

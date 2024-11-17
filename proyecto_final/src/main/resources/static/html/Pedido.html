@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Pedidos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-primary mb-4">Gestión de Pedidos</h1>
+
+        <!-- Contenedor para mensajes -->
+        <div id="mensajePedido" class="alert" role="alert" style="display:none;"></div>
+
+        <!-- Formulario para agregar un nuevo pedido -->
+        <form id="pedidoForm" class="mb-4">
+            <div class="form-group">
+                <label for="clienteId">ID del Cliente</label>
+                <input type="number" class="form-control" id="clienteId" placeholder="ID del Cliente" required>
+            </div>
+            <div class="form-group">
+                <label for="total">Total del Pedido</label>
+                <input type="number" step="0.01" class="form-control" id="total" placeholder="Total del Pedido" required>
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado del Pedido</label>
+                <input type="text" class="form-control" id="estado" placeholder="Estado del Pedido (Ej: Pendiente)" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Agregar Pedido</button>
+        </form>
+
+        <!-- Tabla de pedidos -->
+        <h3>Listado de Pedidos</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID Cliente</th>
+                    <th>Fecha</th>
+                    <th>Total</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="pedidosBody">
+                <!-- Aquí se llenarán los pedidos dinámicamente -->
+            </tbody>
+        </table>
+
+        <!-- Botón para regresar al Index -->
+        <button class="btn btn-secondary btn-block" onclick="window.location.href='/'">Regresar al Inicio</button>
+    </div>
+
+    <script src="../js/Pedido.js"></script>
+</body>
+</html>

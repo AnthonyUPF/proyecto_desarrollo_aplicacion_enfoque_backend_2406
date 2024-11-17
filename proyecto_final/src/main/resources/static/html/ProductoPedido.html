@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos en Pedidos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-primary mb-4">Gestión de Productos en Pedidos</h1>
+
+        <!-- Contenedor para mensajes -->
+        <div id="mensajeProductoPedido" class="alert" role="alert" style="display:none;"></div>
+
+        <!-- Formulario para agregar un nuevo Producto a un Pedido -->
+        <form id="productoPedidoForm" class="mb-4">
+            <div class="form-group">
+                <label for="productoId">ID del Producto</label>
+                <input type="number" class="form-control" id="productoId" placeholder="ID del Producto" required>
+            </div>
+            <div class="form-group">
+                <label for="pedidoId">ID del Pedido</label>
+                <input type="number" class="form-control" id="pedidoId" placeholder="ID del Pedido" required>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad</label>
+                <input type="number" class="form-control" id="cantidad" placeholder="Cantidad del Producto" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Agregar Producto a Pedido</button>
+        </form>
+
+        <!-- Tabla de Productos en Pedidos -->
+        <h3>Listado de Productos en Pedidos</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID Producto</th>
+                    <th>ID Pedido</th>
+                    <th>Cantidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="productosPedidosBody">
+                <!-- Aquí se llenarán los productos en pedidos -->
+            </tbody>
+        </table>
+
+        <!-- Botón para regresar al Index -->
+        <button class="btn btn-secondary btn-block" onclick="window.location.href='/'">Regresar al Inicio</button>
+    </div>
+
+    <script src="../js/ProductoPedido.js"></script>
+</body>
+</html>

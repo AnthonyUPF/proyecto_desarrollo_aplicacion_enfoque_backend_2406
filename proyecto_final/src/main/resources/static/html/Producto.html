@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-primary mb-4">Gestión de Productos</h1>
+
+        <!-- Contenedor para mensajes -->
+        <div id="mensajeProducto" class="alert" role="alert" style="display:none;"></div>
+
+        <!-- Formulario para agregar un nuevo producto -->
+        <form id="productoForm" class="mb-4">
+            <div class="form-group">
+                <label for="nombreProducto">Nombre del Producto</label>
+                <input type="text" class="form-control" id="nombreProducto" placeholder="Nombre del Producto" required>
+            </div>
+            <div class="form-group">
+                <label for="precioProducto">Precio del Producto</label>
+                <input type="number" class="form-control" id="precioProducto" placeholder="Precio del Producto" required>
+            </div>
+            <div class="form-group">
+                <label for="codigoProducto">Código del Producto</label>
+                <input type="text" class="form-control" id="codigoProducto" placeholder="Código único del Producto" required>
+            </div>
+            <div class="form-group">
+                <label for="categoriaProducto">Categoría del Producto</label>
+                <input type="text" class="form-control" id="categoriaProducto" placeholder="Categoría del Producto">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Agregar Producto</button>
+        </form>
+
+        <!-- Tabla de productos -->
+        <h3>Listado de Productos</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Código</th>
+                    <th>Categoría</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="productosBody">
+                <!-- Aquí se llenarán los productos dinámicamente -->
+            </tbody>
+        </table>
+
+        <!-- Botón para regresar al Index -->
+        <button class="btn btn-secondary btn-block" onclick="window.location.href='/'">Regresar al Inicio</button>
+    </div>
+
+    <script src="../js/Producto.js"></script>
+</body>
+</html>
